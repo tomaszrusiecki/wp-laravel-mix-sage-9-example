@@ -17,9 +17,9 @@ npm install laravel-mix laravel-mix-clean --save-dev
 
 `package.json`
 ```
-"build": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js",
-"build:production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js",
-"watch": "npm run build -- --watch"
+"build": "mix",
+"build:production": "mix --production",
+"watch": "mix watch"
 ```
 
 `app/helpers.php`
