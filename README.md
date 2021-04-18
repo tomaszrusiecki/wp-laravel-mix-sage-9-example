@@ -8,11 +8,9 @@ npm install laravel-mix laravel-mix-clean --save-dev
 
 `webpack.mix.js`
 ```
-...
-  proxy: {
+proxy: {
     target: 'YOUR_LOCAL_URL',
-  },
-...
+},
 ````
 
 `package.json`
@@ -30,4 +28,9 @@ function asset_path($asset)
 
     return $assets->dist . $assets->get('/' . $asset);
 }
+```
+
+`config/assets.php`
+```php
+'manifest' => get_theme_file_path().'/dist/mix-manifest.json',
 ```
